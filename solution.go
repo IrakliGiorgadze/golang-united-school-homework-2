@@ -23,7 +23,7 @@ func CalcSquare(sideLen float64, sidesNum Num) float64 {
 	// result := math.Sqrt(sideLen)
 	// return result
 
-	if sideLen == float64(SidesCircle) {
+	if sidesNum == SidesCircle {
 		return math.Pi * sideLen * sideLen
 	} else if sidesNum == SidesTriangle {
 		return sideLen * sideLen * math.Sqrt(3) / 4
