@@ -9,4 +9,5 @@ package square
 // CalcSquare(10.0, SidesCircle)
 
 func CalcSquare(sideLen float64, sidesNum #yourTypeNameHere#) float64 {
+	//
 }
