@@ -5,9 +5,9 @@ import "math"
 type Num int
 
 const (
-	SidesCircle Num = 0
+	SidesCircle   Num = 0
 	SidesTriangle Num = 3
-	SidesSquare Num = 4
+	SidesSquare   Num = 4
 )
 
 // Define custom int type to hold sides number and update CalcSquare signature by replacing #yourTypeNameHere#
@@ -20,6 +20,16 @@ const (
 
 func CalcSquare(sideLen float64, sidesNum Num) float64 {
 	//return sideLen * sideLen
-	result := math.Sqrt(sideLen)
-	return result
+	// result := math.Sqrt(sideLen)
+	// return result
+
+	if sideLen == float64(SidesCircle) {
+		return math.Pi * sideLen * sideLen
+	} else if sidesNum == SidesTriangle {
+		return sideLen * sideLen * math.Sqrt(3) / 4
+	} else if sidesNum == SidesSquare {
+		return sideLen * sideLen
+	} else {
+		return 0
+	}
 }
