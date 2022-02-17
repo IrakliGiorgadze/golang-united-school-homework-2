@@ -1,5 +1,7 @@
 package square
 
+import "math"
+
 type Num int
 
 const (
@@ -17,5 +19,7 @@ const (
 // CalcSquare(10.0, SidesCircle)
 
 func CalcSquare(sideLen float64, sidesNum Num) float64 {
-	return sideLen * sideLen
+	//return sideLen * sideLen
+	result := math.Sqrt(sideLen)
+	return result
 }
