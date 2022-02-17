@@ -19,14 +19,10 @@ const (
 // CalcSquare(10.0, SidesCircle)
 
 func CalcSquare(sideLen float64, sidesNum Num) float64 {
-	//return sideLen * sideLen
-	// result := math.Sqrt(sideLen)
-	// return result
-
 	if sidesNum == SidesCircle {
 		return math.Pi * sideLen * sideLen
 	} else if sidesNum == SidesTriangle {
-		return sideLen * sideLen * math.Sqrt(3) / 4
+		return math.Sqrt(3) / 4 * sideLen * sideLen
 	} else if sidesNum == SidesSquare {
 		return sideLen * sideLen
 	} else {
